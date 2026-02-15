@@ -23589,7 +23589,7 @@ def generate_integration_json(output_file: str = "hamilton_cn_procedures.json"):
             "high_priority": len([p for p in CommunicationsProcedures.get_all_procedures() if p["priority"] == "HIGH"]),
             "medium_priority": len([p for p in CommunicationsProcedures.get_all_procedures() if p["priority"] == "MEDIUM"]),
             "low_priority": len([p for p in CommunicationsProcedures.get_all_procedures() if p["priority"] == "LOW"]),
-            "ai_enhanced": len([p for p in CommunicationsProcedures.get_all_procedures() if p["ai_enhanced"]),
+            "ai_enhanced": len([p for p in CommunicationsProcedures.get_all_procedures() if p["ai_enhanced"]]),
             "total_estimated_hours": sum(p["estimated_hours"] for p in CommunicationsProcedures.get_all_procedures())
         }
     }
@@ -30236,3 +30236,4 @@ elif page == "Unified Dashboard":
 if __name__ == "__main__":
     # This is now handled by Streamlit's own execution model
     pass
+
